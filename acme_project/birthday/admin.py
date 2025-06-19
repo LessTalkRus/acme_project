@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from birthday.models import Birthday
+from birthday.models import Birthday, Tag
 
 admin.site.empty_value_display = 'Не задано'
 
@@ -11,3 +11,9 @@ class BirthdayAdmin(admin.ModelAdmin):
         'last_name',
         'birthday',
     )
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    pass
+
